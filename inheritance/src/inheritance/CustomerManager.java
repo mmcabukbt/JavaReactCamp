@@ -17,14 +17,14 @@ public class CustomerManager {
 	// Bulk Insert
 	public void addMultiple(Customer[] customers) {
 		for (Customer customer : customers) {
-			System.out.println(customer.customerNumber + " eklendi.");
+			add(customer);
 		}
 	}
 
 	// YA DA ayný isimli farklý (signature-imzalý) parametreli - Bulk Insert
 	public void add(Customer[] customers) {
 		for (Customer customer : customers) {
-			System.out.println(customer.customerNumber + " eklendi.");
+			add(customer);
 		}
 	}
 }
