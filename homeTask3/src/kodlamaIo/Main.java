@@ -4,15 +4,10 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		Instructor instructor = new Instructor(1, 1, new int[]{3,2,5},"125456","Engin", "Demiroð","engin@demirog.com","1111111");
+		Instructor instructor = new Instructor(1, 1, new int[]{3,2,5});
 		Student student = new Student();
 		student.setId(122);
-		student.setFirstName("Mehmet");
-		student.setLastName("Çabuk");
-		student.setNationalId("1010100");
-		student.setEmail("mehmet@cabuk.com");
-		student.setPassword("22222");
-		student.setStudentId(22);
+		student.setUserId(5565);
 		
 		//Base UserManager kullanýlarak
 		UserManager userManager = new UserManager();

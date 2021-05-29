@@ -1,23 +1,34 @@
 package kodlamaIo;
 
 public class Student extends User {
-	private int studentId;
+	private int id;
+	private int userId;
 	
 	public Student() {
 		super();
 	}
+
 	//Diyelim ki Studente Parametreli Consutructor için izin vermek istemiyoruz.
 	//Artýk sadece getter ve setter kullanabilir
-/*	public Student(int studentId, int id, String nationalId, String firstName, String lastName, String email, String password) {
-		super(id, nationalId, firstName, lastName, email, password);
-		this.studentId = studentId; 
+/*	public Student(int id, int userId) {
+		super();
+		this.id = id;
+		this.userId = userId;
 	} //*///
 
-	public int getStudentId() {
-		return studentId;
+	public int getId() {
+		return id;
 	}
 
-	public void setStudentId(int studentId) {
-		this.studentId = studentId;
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public int getUserId() {
+		return userId;
+	}
+
+	public void setUserId(int userId) {
+		this.userId = userId;
 	}
 }

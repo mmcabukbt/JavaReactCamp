@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-15">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/activation-1.1.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/antlr-2.7.7.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/apache-mime4j-core-0.7.2.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/axiom-api-1.2.21.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/axiom-dom-1.2.21.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/axiom-impl-1.2.21.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/axiom-jaxb-1.2.21.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/axis2-adb-1.7.9.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/axis2-adb-codegen-1.7.9.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/axis2-ant-plugin-1.7.9.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/axis2-clustering-1.7.9.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/axis2-codegen-1.7.9.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/axis2-corba-1.7.9.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/axis2-fastinfoset-1.7.9.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/axis2-java2wsdl-1.7.9.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/axis2-jaxbri-1.7.9.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/axis2-jaxws-1.7.9.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/axis2-jibx-1.7.9.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/axis2-json-1.7.9.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/axis2-kernel-1.7.9.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/axis2-metadata-1.7.9.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/axis2-mtompolicy-1.7.9.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/axis2-saaj-1.7.9.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/axis2-soapmonitor-servlet-1.7.9.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/axis2-spring-1.7.9.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/axis2-transport-base-1.7.9.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/axis2-transport-http-1.7.9.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/axis2-transport-jms-1.7.9.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/axis2-transport-local-1.7.9.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/axis2-transport-mail-1.7.9.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/axis2-transport-tcp-1.7.9.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/axis2-transport-udp-1.7.9.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/axis2-transport-xmpp-1.7.9.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/axis2-xmlbeans-1.7.9.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/bcel-findbugs-6.0.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/commons-cli-1.2.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/commons-codec-1.2.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/commons-fileupload-1.3.3.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/commons-httpclient-3.1.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/commons-io-2.1.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/geronimo-annotation_1.0_spec-1.1.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/geronimo-jaxws_2.2_spec-1.0.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/geronimo-jta_1.1_spec-1.1.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/geronimo-saaj_1.3_spec-1.0.1.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/geronimo-stax-api_1.0_spec-1.0.1.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/geronimo-ws-metadata_2.0_spec-1.1.2.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/gson-2.1.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/httpclient-4.5.3.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/httpcore-4.4.6.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/jalopy-1.5rc3.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/jaxb-api-2.2.6.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/jaxb-impl-2.2.6.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/jaxb-xjc-2.2.6.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/jaxen-1.1.6.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/jaxws-tools-2.2.6.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/jettison-1.3.8.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/jibx-bind-1.2.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/jibx-run-1.2.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/jsr311-api-1.1.1.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/juli-6.0.53.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/log4j-1.2.15.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/mail-1.4.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/mex-1.7.9-impl.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/neethi-3.0.3.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/stax2-api-3.1.1.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/tribes-6.0.53.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/woden-core-1.0M10.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/woodstox-core-asl-4.2.0.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/wsdl4j-1.6.2.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/xalan-2.7.0.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/xmlbeans-2.6.0.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/xml-resolver-1.2.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/dropins/plugins/xmlschema-core-2.2.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

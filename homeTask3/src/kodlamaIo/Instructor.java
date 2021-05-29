@@ -1,25 +1,32 @@
 package kodlamaIo;
 
 public class Instructor extends User {
-	private int instructorId;
+	private int id;
+	private int userId;
 	private int[] teachingBrancheIds;
 //	private String aboutContent;
 	
-//*
 	public Instructor() {
 		super(); //Useri çaðýr
 	}
-	//Diyelim ki Instructor classýnýn Parametreli Constructorýna izin vermek istiyoruz. 
-	public Instructor(int id, int instructorId, int[] teachingBrancheIds, String nationalId, String firstName, String lastName, String email, String password) {
-		super(id, nationalId, firstName, lastName, email, password);
-		this.instructorId = instructorId;
+//*	//Diyelim ki Instructor classýnýn Parametreli Constructorýna izin vermek istiyoruz. 
+	public Instructor(int id, int userId, int[] teachingBrancheIds) {
+		super();
+		this.id = id;
+		this.userId = userId;
 		this.teachingBrancheIds = teachingBrancheIds;
 	}//*/
-	public int getInstructorId() {
-		return instructorId;
+	public int getId() {
+		return id;
 	}
-	public void setInstructorId(int instructorId) {
-		this.instructorId = instructorId;
+	public void setId(int id) {
+		this.id = id;
+	}
+	public int getUserId() {
+		return userId;
+	}
+	public void setUserId(int userId) {
+		this.userId = userId;
 	}
 	public int[] getTeachingBrancheIds() {
 		return teachingBrancheIds;
