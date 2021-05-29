@@ -10,11 +10,11 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		Customer customer = new Customer(12, "1111111111", "MEHMET", "HIZLI", 1975);
+		Customer customer = new Customer(12, "45454655", "MEHMET", "HIZLI", 1972);
 		
 		BaseCustomerManager starbucksCustomerManager =  
-//				new StarbucksCustomerManager(new MernisServiceAdapter());
-				new NeroCustomerManager(new MernisServiceAdapter());
+				new StarbucksCustomerManager(new MernisServiceAdapter());
+//				new NeroCustomerManager(new MernisServiceAdapter());
 		
 		try {
 			starbucksCustomerManager.save(customer);
