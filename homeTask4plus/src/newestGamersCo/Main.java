@@ -2,16 +2,16 @@ package newestGamersCo;
 
 import java.util.Date;
 
-import newestGamersCo.Adapters.MernisServiceAdapter;
-import newestGamersCo.Concrete.CampaignManager;
-import newestGamersCo.Concrete.GameManager;
-import newestGamersCo.Concrete.GamerManager;
-import newestGamersCo.Concrete.SaleManager;
-import newestGamersCo.Entities.Campaign;
-import newestGamersCo.Entities.Game;
-import newestGamersCo.Entities.Gamer;
-import newestGamersCo.Entities.Sale;
 import newestGamersCo.UIs.MarketingUI;
+import newestGamersCo.adapters.MernisServiceAdapter;
+import newestGamersCo.concretes.CampaignManager;
+import newestGamersCo.concretes.GameManager;
+import newestGamersCo.concretes.GamerManager;
+import newestGamersCo.concretes.SaleManager;
+import newestGamersCo.entities.Campaign;
+import newestGamersCo.entities.Game;
+import newestGamersCo.entities.Gamer;
+import newestGamersCo.entities.Sale;
 
 public class Main {
 

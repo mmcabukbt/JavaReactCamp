@@ -2,11 +2,11 @@ package newestGamersCo.UIs;
 
 import java.util.Date;
 
-import newestGamersCo.Core.ServiceRepo;
-import newestGamersCo.Entities.Campaign;
-import newestGamersCo.Entities.Game;
-import newestGamersCo.Entities.Gamer;
-import newestGamersCo.Entities.Sale;
+import newestGamersCo.core.ServiceRepo;
+import newestGamersCo.entities.Campaign;
+import newestGamersCo.entities.Game;
+import newestGamersCo.entities.Gamer;
+import newestGamersCo.entities.Sale;
 
 public class MarketingUI {
 

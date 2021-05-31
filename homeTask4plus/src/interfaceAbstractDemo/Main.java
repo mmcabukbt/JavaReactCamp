@@ -1,10 +1,10 @@
 package interfaceAbstractDemo;
 
-import interfaceAbstractDemo.Abstract.BaseCustomerManager;
-import interfaceAbstractDemo.Adapters.MernisServiceAdapter;
-import interfaceAbstractDemo.Concrete.NeroCustomerManager;
-import interfaceAbstractDemo.Concrete.StarbucksCustomerManager;
-import interfaceAbstractDemo.Entities.Customer;
+import interfaceAbstractDemo.abstracts.BaseCustomerManager;
+import interfaceAbstractDemo.adapters.MernisServiceAdapter;
+import interfaceAbstractDemo.concretes.NeroCustomerManager;
+import interfaceAbstractDemo.concretes.StarbucksCustomerManager;
+import interfaceAbstractDemo.entities.Customer;
 
 public class Main {
 
