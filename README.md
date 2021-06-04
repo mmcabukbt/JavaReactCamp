@@ -28,5 +28,5 @@ Java + React Education works on &copy;[2021 Kodlama.io](https://www.kodlama.io/)
 
 ###  Çok Katmanli Kurumsal Mimariler
 * [Course 6 - northwind](/northwind/src/main/java/kodlamaio/northwind)
-  * [Home Task #2](/hrms/src/main/resources/hrms_schema)
+  * [Home Task #2](/hrms/src/main/resources/hrms_schema_script)
   * [Home Task #3](/hrms/src/main/java/kodlama/ht6/hrms)
