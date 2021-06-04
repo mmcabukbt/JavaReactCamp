@@ -25,3 +25,7 @@ Java + React Education works on &copy;[2021 Kodlama.io](https://www.kodlama.io/)
 ### JAVA ile Nesne Yonelimli Programlamada Uzmanlasma-2 
 * [Course 5 - nLayeredDemo](/nLayeredDemo/src/nLayeredDemo)
   * [Home Task #1](/homeTask5/src/eTrade)
+
+###  Çok katmanlý kurumsal mimariler
+* [Course 6 - northwind](/northwind/src/main/java/kodlamaio/northwind)
+  * [Home Task #2](/homeTask6/src/eTrade)
