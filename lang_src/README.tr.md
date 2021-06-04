@@ -1,4 +1,4 @@
-![Course Logo](/JavaKamp.png)
+![Course Logo](JavaKamp.png)
 # JavaReactCamp
  &copy;[2021 Kodlama.io](https://www.kodlama.io/) da Java + React Eðitim Kampý Çalýþmalarý
 
