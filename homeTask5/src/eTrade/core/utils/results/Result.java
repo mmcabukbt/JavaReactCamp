@@ -1,8 +1,8 @@
 package eTrade.core.utils.results;
 
 public class Result {
-	public boolean isSuccess;
-	public String message = "No Info";
+	private boolean isSuccess;
+	private String message = "No Info";
 	
 	public Result(boolean isSuccess, String message) {
 		this(isSuccess);
@@ -11,5 +11,13 @@ public class Result {
 
 	public Result(boolean isSuccess) {
 		this.isSuccess = isSuccess;
+	}
+
+	public boolean isSuccess() {
+		return isSuccess;
+	}
+
+	public String getMessage() {
+		return message;
 	}
 }

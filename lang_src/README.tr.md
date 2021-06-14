@@ -33,4 +33,6 @@
   
 ### Spring Boot ile çalýþmaya baþlamak
 * [Course 7 - northwind](/northwind/src/main/java/kodlamaio/northwind)
+  * [Home Task #1](/hrms/src/main/java/kodlama/ht6/hrms)
+  * [Home Task #3](/hrms/src/main/java/kodlama/ht6/hrms) ~ [Güncellenmiþ Kaynaklar](/hrms/src/main/resources/hrms_schema_script)
   

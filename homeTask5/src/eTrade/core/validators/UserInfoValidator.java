@@ -21,7 +21,7 @@ public class UserInfoValidator implements UserInfoValidatorService {
 			return new ErrorResult("[Validation]> Password field can not be less 6 digits..");
 		}
 //email validation
-		if (emailValidate(user.getEmail()).isSuccess) {
+		if (emailValidate(user.getEmail()).isSuccess()) {
 			return new SuccessResult("[Validation]> User's informations validated");
 		}
 		return new ErrorResult("[Validation]> Email is NOT valid!");

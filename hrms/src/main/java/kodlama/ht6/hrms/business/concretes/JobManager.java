@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import kodlama.ht6.hrms.business.abstracts.JobService;
 import kodlama.ht6.hrms.core.utilities.results.DataResult;
+import kodlama.ht6.hrms.core.utilities.results.ErrorDataResult;
 import kodlama.ht6.hrms.core.utilities.results.SuccessDataResult;
 import kodlama.ht6.hrms.dataAccess.abstracts.JobDao;
 import kodlama.ht6.hrms.entities.concretes.Job;
@@ -23,12 +24,16 @@ public class JobManager implements JobService{
 
 	@Override
 	public DataResult<Job> add(Job job) {
-		return new SuccessDataResult<Job>(this.jobDao.save(job), "Bu iş, işler listesine eklendi");
+		try {
+			return new SuccessDataResult<Job>(this.jobDao.save(job), "This job added to database");			
+		} catch (Exception e) { //Refactor this
+			return new ErrorDataResult<Job>(null, "Probably UNIQUE constrain. Aynı Job zaten mevcut! HATA > " + e.getMessage());
+		}
 	}
 	
 	@Override
 	public DataResult<List<Job>> getAll() {
-		return new SuccessDataResult<List<Job>>(this.jobDao.findAll(), "Tüm işler listelendi");
+		return new SuccessDataResult<List<Job>>(this.jobDao.findAll(), "All jobs listed!");
 	}
 /*
 	@Override

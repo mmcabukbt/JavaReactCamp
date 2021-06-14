@@ -6,20 +6,20 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name="jobs")
-public @Data class Job {
-	
+public @Data class Job {	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="id")
+	@Column(name="id", nullable = false, updatable = false)
 	private int id;
 	
 	@Column(name="top_job_category_id")
@@ -27,7 +27,7 @@ public @Data class Job {
 	
 	@Column(name="sub_job_category_id")
 	private int subJobCategoryId;
-	
-	@Column(name="job_name")
+
+	@Column(name="job_name", unique = true)
 	private String jobName;
 }

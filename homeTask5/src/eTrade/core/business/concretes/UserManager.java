@@ -31,12 +31,12 @@ public class UserManager implements UserService {
 	@Override
 	public Result add(User user) {
 // first, info validation   ***business rules
-		Result result = infoValidatorService.userInfoValidate(user);
-		if (!result.isSuccess) {
+		Result result = this.infoValidatorService.userInfoValidate(user);
+		if (!result.isSuccess()) {
 			return result;
 		}
 // user not exist
-		DataResult<User> dresult = userDao.getByEmail(user.getEmail());
+		DataResult<User> dresult = this.userDao.getByEmail(user.getEmail());
 		if (dresult.data != null) {
 			return new ErrorDataResult<User>(user, "[UserManager]> User already exists!");
 		}
@@ -45,10 +45,10 @@ public class UserManager implements UserService {
 				+ "\". Please click the link to confirm and activate your membership! ");
 
 // link confirmation and add to db
-		result = confirmationLinkService1.confirmUser(user);
-		if (result.isSuccess) {
-			System.out.println(result.message); //print confirmation result
-			return userDao.add(user);
+		result = this.confirmationLinkService1.confirmUser(user);
+		if (result.isSuccess()) {
+			System.out.println(result.getMessage()); //print confirmation result
+			return this.userDao.add(user);
 		} else {
 			return result;
 		}
@@ -57,19 +57,19 @@ public class UserManager implements UserService {
 	@Override
 	public Result addFromService() {
 // just get user info, user not exist, get password  ***business rules
-		DataResult<User> result = authorizationProviderService.getUserInfo();
-		if (!result.isSuccess) {
+		DataResult<User> result = this.authorizationProviderService.getUserInfo();
+		if (!result.isSuccess()) {
 			return result;
 		}
-		System.out.println(result.message);	//print authorization result
+		System.out.println(result.getMessage());	//print authorization result
 // user not exist
-		if (userDao.getByEmail(result.data.getEmail()).data != null) {
-			return new ErrorDataResult<User>(result.data, "[UserManager]> User already exists!11");
+		if (this.userDao.getByEmail(result.data.getEmail()).data != null) {
+			return new ErrorDataResult<User>(result.data, "[UserManager]> User already exists!");
 		}
 // simulate to take password from user to register via AuthorizationService 
 		if (takePassword() != "") {
 			result.data.setPassword(takePassword());
-			return userDao.add(result.data);
+			return this.userDao.add(result.data);
 		} else {
 			return result;
 		}
@@ -81,26 +81,26 @@ public class UserManager implements UserService {
 
 	@Override
 	public Result update(User user) {
-		return userDao.update(user);
+		return this.userDao.update(user);
 	}
 
 	@Override
 	public Result delete(User user) {
-		return userDao.delete(user);
+		return this.userDao.delete(user);
 	}
 
 	@Override
 	public DataResult<User> getById(int id) {
-		return userDao.getById(id);
+		return this.userDao.getById(id);
 	}
 
 	@Override
 	public DataResult<User> getByEmail(String email) {
-		return userDao.getByEmail(email);
+		return this.userDao.getByEmail(email);
 	}
 
 	@Override
 	public DataResult<List<User>> getAll() {
-		return userDao.getAll();
+		return this.userDao.getAll();
 	}
 }
