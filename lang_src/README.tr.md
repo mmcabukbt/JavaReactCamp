@@ -36,3 +36,6 @@
   * [Ödev #1](/hrms/src/main/java/kodlama/ht6/hrms)
   * [Ödev #3](/hrms/src/main/java/kodlama/ht6/hrms) ~ [Güncellenmiþ Kaynaklar](/hrms/src/main/resources/hrms_schema_script)
   
+### Spring JPA/Hibernate
+* [Kurs 8 - northwind ~ Güncellemeler..](/northwind/src/main/java/kodlamaio/northwind)
+  * [Ödev #1 ~ Güncellemeler..](/hrms/src/main/java/kodlama/ht6/hrms)

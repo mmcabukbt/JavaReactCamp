@@ -7,5 +7,7 @@ import kodlama.ht6.hrms.entities.concretes.JobSeeker;
 
 public interface JobSeekerService {
 
+	DataResult<JobSeeker> add(JobSeeker jobSeeker);
+	
 	DataResult<List<JobSeeker>> getAll();	
 }

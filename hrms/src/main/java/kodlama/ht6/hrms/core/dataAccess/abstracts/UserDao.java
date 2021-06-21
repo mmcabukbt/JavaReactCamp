@@ -1,16 +1,13 @@
 package kodlama.ht6.hrms.core.dataAccess.abstracts;
 
-import java.util.List;
-
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
 
 import kodlama.ht6.hrms.core.entities.concretes.User;
 
-public interface UserDao extends JpaRepository<User, Integer>{
+public interface UserDao extends JpaRepository<User, Long>{
 	
 	User getByEmail(String email);
+	User getByid(Long id);
 /*	
 	@Query("SELECT p FROM Product p WHERE p.productName = :productName AND p.category.categoryId = :categoryId")
 	List<Product> getByNameAndCategory(@Param("productName") String productName, @Param("categoryId") int categoryId); 

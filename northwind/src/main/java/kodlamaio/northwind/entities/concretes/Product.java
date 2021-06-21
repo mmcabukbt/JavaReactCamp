@@ -10,6 +10,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import org.springframework.web.jsf.FacesContextUtils;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,9 +23,8 @@ import lombok.NoArgsConstructor;
 public @Data class Product {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="product_id")
+	@Column(name="product_id", nullable = false, updatable = false)
 	private int id;
-	 
 /*	
 	@Column(name="category_id")
 	private int categoryId; //*///
@@ -42,5 +43,5 @@ public @Data class Product {
 	
 	@ManyToOne()
 	@JoinColumn(name = "category_id")
-	private Category category;	
+	private Category category;
 }

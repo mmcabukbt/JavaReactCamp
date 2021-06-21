@@ -17,7 +17,7 @@ import kodlama.ht6.hrms.entities.concretes.Job;
 @RequestMapping("/api/jobs")	
 public class JobsController {
 	
-	private JobService jobService;
+	private final JobService jobService;
 	
 	@Autowired
 	public JobsController(JobService jobService) {

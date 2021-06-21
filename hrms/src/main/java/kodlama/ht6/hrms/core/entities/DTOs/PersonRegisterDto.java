@@ -6,8 +6,10 @@ import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = true)
-public @Data class StaffRegisterDto extends JobSeekerRegisterDto {
-
-	private int jobId;
-	private double salary;
-}
+public @Data class PersonRegisterDto extends UserRegisterDto {
+	
+	private String tckNo;
+	private String firstName;
+	private String lastName;
+	private int yearOfBirth;
+} 

@@ -15,7 +15,7 @@ import kodlama.ht6.hrms.entities.concretes.JobSeeker;
 @RequestMapping("/api/jobSeekers")
 public class JobSeekersController {
 
-	private JobSeekerService jobSeekerService;
+	private final JobSeekerService jobSeekerService;
 
 	@Autowired
 	public JobSeekersController(JobSeekerService jobSeekerService) {

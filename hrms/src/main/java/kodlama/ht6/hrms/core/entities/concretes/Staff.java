@@ -4,10 +4,13 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
-import kodlama.ht6.hrms.entities.concretes.Person;
+import kodlama.ht6.hrms.entities.concretes.Job;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
@@ -18,17 +21,22 @@ import lombok.NoArgsConstructor;
 @PrimaryKeyJoinColumn(name = "user_id")
 @EqualsAndHashCode(callSuper = true)
 public @Data class Staff extends Person {
-	
+/*	
 	@Column(name="job_id")
 	private int jobId;
-	
+//*///	
 	@Column(name="salary")
-	private double salary; 
+	private double salary;
+	
+	@ManyToOne(optional = false)
+	@JoinColumn(name="job_id", nullable = false, updatable = false)
+	private Job job; //*////
 
-	public Staff(int id, String email, byte[] passwordHash, byte[] passwordSalt, boolean active, List<Claim> claims, 
-			String tckNo, String firstName, String lastName, int yearOfBirth, int jobId, double salary) {
+
+	public Staff(long id, String email, byte[] passwordHash, byte[] passwordSalt, boolean active, List<Claim> claims, 
+			String tckNo, String firstName, String lastName, int yearOfBirth, Job job, double salary) {
 		super(id, email, passwordHash, passwordSalt, active, claims, tckNo, firstName, lastName, yearOfBirth);
-		this.jobId = jobId;
+		this.job = job;
 		this.salary = salary;
 	}
 }

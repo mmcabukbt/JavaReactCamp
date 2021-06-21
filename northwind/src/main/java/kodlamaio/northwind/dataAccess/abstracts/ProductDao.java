@@ -11,7 +11,8 @@ import kodlamaio.northwind.entities.dtos.ProductWithCategoryDto;
 
 public interface ProductDao extends JpaRepository<Product, Integer> {
  	List<Product> findByCategory_CategoryId(int categoryId);
- 	
+	
+ 	Product getByid(int categoryId);
  	Product getByProductName(String productName);
 
 	Product getByProductNameAndCategory_CategoryId(String productName, int categoryId);

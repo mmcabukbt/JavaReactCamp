@@ -7,24 +7,24 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import kodlama.ht6.hrms.business.abstracts.CorporateService;
+import kodlama.ht6.hrms.business.abstracts.CityService;
 import kodlama.ht6.hrms.core.utilities.results.DataResult;
-import kodlama.ht6.hrms.entities.concretes.Corporate;
+import kodlama.ht6.hrms.entities.concretes.City;
 
 @RestController
-@RequestMapping("/api/corporates")
-public class CorporatesController {
+@RequestMapping("/api/cities")
+public class CitiesController {
 
-	private CorporateService corporateService;
+	private final CityService cityService;
 
 	@Autowired
-	public CorporatesController(CorporateService corporateService) {
+	public CitiesController(CityService cityService) {
 		super();
-		this.corporateService = corporateService;
+		this.cityService = cityService;
 	}
 
 	@GetMapping("/getall")
-	public DataResult<List<Corporate>> getAll() {
-		return this.corporateService.getAll();
+	public DataResult<List<City>> getAll() {
+		return this.cityService.getAll();
 	}
 }

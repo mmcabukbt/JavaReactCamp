@@ -8,6 +8,7 @@ import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 import kodlama.ht6.hrms.core.entities.concretes.Claim;
+import kodlama.ht6.hrms.core.entities.concretes.Person;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
@@ -22,7 +23,7 @@ public @Data class JobSeeker extends Person {
 	@Column(name="jobseek_status")
 	private boolean jobseekStatus;
 
-	public JobSeeker(int id, String email, byte[] passwordHash, byte[] passwordSalt, boolean active, List<Claim> claims, 
+	public JobSeeker(long id, String email, byte[] passwordHash, byte[] passwordSalt, boolean active, List<Claim> claims, 
 			String tckNo, String firstName, String lastName, int yearOfBirth, boolean jobseekStatus) {
 		super(id, email, passwordHash, passwordSalt, active, claims, tckNo, firstName, lastName, yearOfBirth);
 		this.jobseekStatus = jobseekStatus;

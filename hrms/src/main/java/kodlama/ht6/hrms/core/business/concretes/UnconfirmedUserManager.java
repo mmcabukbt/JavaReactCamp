@@ -2,6 +2,7 @@ package kodlama.ht6.hrms.core.business.concretes;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import kodlama.ht6.hrms.core.business.abstracts.UnconfirmedUserService;
@@ -13,8 +14,9 @@ import kodlama.ht6.hrms.core.utilities.results.SuccessDataResult;
 @Service
 public class UnconfirmedUserManager implements UnconfirmedUserService {
 
-	private UnconfirmedUserDao unconfirmedUserDao;
+	private final UnconfirmedUserDao unconfirmedUserDao;
 
+	@Autowired
 	public UnconfirmedUserManager(UnconfirmedUserDao unconfirmedUserDao) {
 		super();
 		this.unconfirmedUserDao = unconfirmedUserDao;

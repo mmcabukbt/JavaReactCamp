@@ -1,4 +1,4 @@
-package kodlama.ht6.hrms.entities.concretes;
+package kodlama.ht6.hrms.core.entities.concretes;
 
 import java.util.List;
 
@@ -7,8 +7,6 @@ import javax.persistence.Entity;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
-import kodlama.ht6.hrms.core.entities.concretes.Claim;
-import kodlama.ht6.hrms.core.entities.concretes.User;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
@@ -32,7 +30,7 @@ public @Data class Person extends User {
 	@Column(name="year_of_birth")
 	private int yearOfBirth;
 
-	public Person(int id, String email, byte[] passwordHash, byte[] passwordSalt, boolean active,
+	public Person(long id, String email, byte[] passwordHash, byte[] passwordSalt, boolean active,
 			List<Claim> claims,	String tckNo, String firstName, String lastName, int yearOfBirth) {
 		super(id, email, passwordHash, passwordSalt, active, claims);
 		this.tckNo = tckNo;

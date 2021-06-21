@@ -1,10 +1,11 @@
 1,Administrator
 2,Developer
+3,Data Editor
+30,Ordinary User
+40,Staff
+50,Employer
+60,JobSeeker
+32730,Unconfirmed User
+32740,Unconfirmed Staff
 32750,Unconfirmed Employer
 32760,Unconfirmed JobSeeker
-3,Data Editor
-50,Confirmed Employer
-60,Confirmed JobSeeker
-40,Ordinary Staff
-32740,Unconfirmed Staff
-30,Ordinary User

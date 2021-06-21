@@ -14,7 +14,7 @@ import kodlama.ht6.hrms.entities.concretes.Job;
 @Service
 public class JobManager implements JobService{
 	
-	private JobDao jobDao;
+	private final JobDao jobDao;
 
 	@Autowired
 	public JobManager(JobDao jobDao) {
@@ -32,19 +32,15 @@ public class JobManager implements JobService{
 	}
 	
 	@Override
+	public DataResult<Job> getJob(int id) {
+		Job getJob = this.jobDao.getByid(id);
+		return getJob == null ? new ErrorDataResult<Job>(null, "[JobService]> Job> Not found!")
+				: new SuccessDataResult<Job>(getJob, "[JobService]> Job> Already exists!");
+	}
+	
+	@Override
 	public DataResult<List<Job>> getAll() {
 		return new SuccessDataResult<List<Job>>(this.jobDao.findAll(), "All jobs listed!");
 	}
-/*
-	@Override
-	public List<JobPosition> getByTopCategoryId(int id) {
-		return this.jobPositionDao.getByTopCategoryId(id);
-	}
 
-	@Override
-	public List<JobPosition> getBySubCategoryId(int id) {
-		return this.jobPositionDao.getBySubCategoryId(id);
-	}//*///
-
-	
 }

@@ -17,12 +17,12 @@ public @Data class Claim {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id", updatable = false, nullable = false)
-	private short id; //*///
+	private int id; //*///
 	
 	@Column(name="name")
 	private String name;
 
-	public Claim(short id) {
+	public Claim(int id) {
 		this.id = id;
 	}	
 }

@@ -19,7 +19,7 @@ import lombok.NoArgsConstructor;
 public @Data class UnconfirmedUser implements User_ {
 	@Id
 	@Column(name = "user_id", nullable = false, updatable = false)
-	private int userId;
+	private long userId;
 
 	@Column(name = "email")
 	private String email;

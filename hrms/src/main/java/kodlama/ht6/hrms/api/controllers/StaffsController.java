@@ -15,7 +15,7 @@ import kodlama.ht6.hrms.core.utilities.results.DataResult;
 @RequestMapping("/api/staffs")
 public class StaffsController {
 	
-	private StaffService staffService;
+	private final StaffService staffService;
 	
 	@Autowired
 	public StaffsController(StaffService staffService) {

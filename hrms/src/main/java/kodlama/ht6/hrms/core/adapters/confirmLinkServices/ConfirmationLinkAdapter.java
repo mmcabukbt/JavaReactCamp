@@ -1,6 +1,6 @@
 package kodlama.ht6.hrms.core.adapters.confirmLinkServices;
 
-import kodlama.ht6.hrms.core.business.abstracts.UserRegistrationService;
+import kodlama.ht6.hrms.core.business.abstracts.UserService;
 import kodlama.ht6.hrms.core.entities.concretes.UnconfirmedUser;
 import kodlama.ht6.hrms.core.utilities.results.ErrorResult;
 import kodlama.ht6.hrms.core.utilities.results.Result;
@@ -8,11 +8,11 @@ import kodlama.ht6.hrms.core.utilities.results.SuccessResult;
 
 public class ConfirmationLinkAdapter implements ConfirmationLinkService {
 	
-	UserRegistrationService userRegistrationService;
+	UserService userService;
 
-	public ConfirmationLinkAdapter(UserRegistrationService userRegistrationService) {
+	public ConfirmationLinkAdapter(UserService userRegistrationService) {
 		super();
-		this.userRegistrationService = userRegistrationService;
+		this.userService = userRegistrationService;
 	}
 
 	@Override
@@ -23,7 +23,7 @@ public class ConfirmationLinkAdapter implements ConfirmationLinkService {
 		try {
 			System.out.println(">> Confirmation Link Service waiting..(2 seconds)..");
 			Thread.sleep(1500);
-			userRegistrationService.activateUser(unconfirmedUser);
+			userService.activateUser(unconfirmedUser);
 			return new SuccessResult("[ConfirmationLinkService]> Approved! User clicked the link...");
 		} catch (InterruptedException e) {
 			

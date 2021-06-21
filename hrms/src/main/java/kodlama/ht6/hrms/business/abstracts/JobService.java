@@ -8,6 +8,9 @@ import kodlama.ht6.hrms.entities.concretes.Job;
 public interface JobService {
 	
 	DataResult<Job> add(Job job);
+	
+	DataResult<Job> getJob(int id);	
+	
 	DataResult<List<Job>> getAll();
 	
 //	List<JobPosition> getByTopCategoryId(int id);

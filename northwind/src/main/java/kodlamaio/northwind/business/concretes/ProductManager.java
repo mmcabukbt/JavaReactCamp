@@ -37,7 +37,9 @@ public class ProductManager implements ProductService {
 
 	@Override
 	public DataResult<Product> getById(int productId) {
-		return new SuccessDataResult<Product>(this.productDao.findById(productId).get(), "Ürün listelendi");
+		return new SuccessDataResult<Product>(this.productDao.getByid(productId), "Ürün listelendi"); //Çalışıyor
+		//return new SuccessDataResult<Product>(this.productDao.findById(productId).get(), "Ürün listelendi");>Çalışıyor 
+		//return new SuccessDataResult<Product>(this.productDao.getById(productId), "Ürün listelendi"); >>ÇALIŞMIYOR
 	}
 
 	@Override

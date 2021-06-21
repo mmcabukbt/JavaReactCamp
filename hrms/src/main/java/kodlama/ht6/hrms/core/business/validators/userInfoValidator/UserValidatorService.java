@@ -1,7 +1,7 @@
 package kodlama.ht6.hrms.core.business.validators.userInfoValidator;
 
 import kodlama.ht6.hrms.core.entities.DTOs.CorporateRegisterDto;
-import kodlama.ht6.hrms.core.entities.DTOs.JobSeekerRegisterDto;
+import kodlama.ht6.hrms.core.entities.DTOs.PersonRegisterDto;
 import kodlama.ht6.hrms.core.entities.DTOs.UserLoginDto;
 import kodlama.ht6.hrms.core.utilities.results.Result;
 
@@ -15,8 +15,8 @@ public interface UserValidatorService {
 	static final String EMAIL_HTML_INPUT_BEFORE5 = "^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$";
 	static final String EMAIL_HTML5_INPUT_CHECK = "^[a-zA-Z0-9.!#$%&'*+\\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$";	
 
-	Result personInfoValidate(JobSeekerRegisterDto personDto);
-	Result corporateInfoValidate(CorporateRegisterDto corporateDto);
-	Result userInfoValidate(UserLoginDto userDto);
+	Result personInfoValidate(PersonRegisterDto personRegisterDto);
+	Result corporateInfoValidate(CorporateRegisterDto corporateRegisterDto);
+	Result userInfoValidateBase(UserLoginDto userDto);
 	Result emailValidate(String email);
 }
