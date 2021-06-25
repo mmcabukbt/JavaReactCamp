@@ -42,6 +42,6 @@ Java + React Education works on &copy;[2021 Kodlama.io](https://www.kodlama.io/)
   
 ### Spring AOP
 * [Course 9 - northwind ~ Updates...](/northwind/src/main/java/kodlamaio/northwind)
-  * [Home Task #1 ~ Updates...](/hrms/src/main/java/kodlama/ht6/hrms)
-  * [Home Task #2 & Source ~ Updates...](/hrms/src/main/java/kodlama/ht6/hrms)
+  * [Home Task #1 ~ #2 Updates...](/hrms/src/main/java/kodlama/ht6/hrms)
+  * [hrms Source Updates...](/hrms/src/main/resources/hrms_schema_script)
   

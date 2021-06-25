@@ -42,5 +42,5 @@
   
 ### Spring AOP
 * [Kurs 9 - northwind ~ Güncellemeler..](/northwind/src/main/java/kodlamaio/northwind)
-  * [Ödev #1 ~ Güncellemeler..](/hrms/src/main/java/kodlama/ht6/hrms)
-  * [Ödev #2 ve Kaynak ~ Güncellemeleri..](/hrms/src/main/java/kodlama/ht6/hrms)
+  * [Ödev #1 ~ #2 Güncellemeler..](/hrms/src/main/java/kodlama/ht6/hrms)
+  * [hrms Kaynak Güncellemeleri..](/hrms/src/main/resources/hrms_schema_script)

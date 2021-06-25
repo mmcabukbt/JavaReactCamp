@@ -53,18 +53,18 @@ public @Data class JsResume {
 
 	@OneToMany()
 	@JoinColumn(name = "resume_id")
-	private List<JsEducation> jsEducation;
+	private List<JsEducation> jsEducations;
 	
 	@OneToMany()
 	@JoinColumn(name = "resume_id")
-	private List<JsExperience> jsExperience; 
+	private List<JsExperience> jsExperiences; 
 
 //	@OneToMany(mappedBy = "jsResume")
 	@OneToMany()
 	@JoinColumn(name = "resume_id")
-	private List<JsForeignLangKnowledge> jsForeignLangKnowledge; 
+	private List<JsForeignLangKnowledge> jsForeignLangKnowledges; 
 
 	@OneToMany()
 	@JoinColumn(name = "resume_id")
-	private List<JsProgTechKnowledge> jsProgTechKnowledge; 
+	private List<JsProgTechKnowledge> jsProgTechKnowledges; 
 }

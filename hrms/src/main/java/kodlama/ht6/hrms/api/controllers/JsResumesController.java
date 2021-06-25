@@ -13,6 +13,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -38,6 +39,7 @@ import kodlama.ht6.hrms.entities.concretes.jsResumeBase.KnowledgeLevel;
 import kodlama.ht6.hrms.entities.concretes.jsResumeBase.ProgrammingTech;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/api/jsResumes")	
 public class JsResumesController {
 	

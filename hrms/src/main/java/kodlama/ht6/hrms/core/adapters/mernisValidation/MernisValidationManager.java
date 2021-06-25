@@ -6,8 +6,8 @@ import org.springframework.stereotype.Service;
 public class MernisValidationManager implements MernisValidationService {
 	
 	public boolean isTCKNValid(String identityNumber) {
-		return true;
-/*/*
+//		return true;
+//* 	//Comment haline getirmel için satır başındaki İlk '//' den slash ın birini silip '/' yapın   
 		if (identityNumber == null
                 || identityNumber.length() != TCKN_LENGTH
                 || !identityNumber.matches(TCKNO_CHECK_FORMAT)) {

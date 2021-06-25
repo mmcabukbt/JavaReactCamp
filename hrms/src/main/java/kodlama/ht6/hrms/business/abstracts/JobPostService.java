@@ -14,14 +14,12 @@ public interface JobPostService {
 	DataResult<JobPost> getById(Long id);
 	
 	DataResult<List<JobPost>> getAll();
-
-	DataResult<List<JobPost>> getAll_OrderByClosingDateDirection(boolean isDesc);
 	
 	DataResult<List<JobPost>> getAll_ByClosingDateAfter_Now();
 
 	DataResult<List<JobPost>> getAllActive();
 	
-	DataResult<List<JobPost>> getAllActive_OrderByClosingDateDirection(boolean isDesc);
+	DataResult<List<JobPost>> getAllActive_OrderByPostingDateDirection(boolean isDesc);
 	
-	DataResult<List<JobPost>> getByUserIdOrderByClosingDateIsActiveDirection(Long userId, boolean isOnlyActive, boolean isDesc);
+	DataResult<List<JobPost>> getByUserIdOrderByPostingDateIsActiveDirection(Long userId, boolean isOnlyActive, boolean isDesc);
 }

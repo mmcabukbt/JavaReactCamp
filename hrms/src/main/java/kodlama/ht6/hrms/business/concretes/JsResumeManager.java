@@ -146,10 +146,10 @@ public class JsResumeManager implements JsResumeService {
 		if (!getJsResume.isSuccess()) {
 			return getJsResume;
 		}
-		getJsResume.getData().setJsEducation(this.getJsEducationByResume(id).getData());
-		getJsResume.getData().setJsExperience(this.getJsExperienceByResume(id).getData());
-		getJsResume.getData().setJsProgTechKnowledge(this.getByResumeIdOrderByKnowledgeLevel_idDesc_ProgTech(id).getData());
-		getJsResume.getData().setJsForeignLangKnowledge(this.getByResumeIdOrderByKnowledgeLevel_idDesc_FLanguage(id).getData());
+		getJsResume.getData().setJsEducations(this.getJsEducationByResume(id).getData());
+		getJsResume.getData().setJsExperiences(this.getJsExperienceByResume(id).getData());
+		getJsResume.getData().setJsProgTechKnowledges(this.getByResumeIdOrderByKnowledgeLevel_idDesc_ProgTech(id).getData());
+		getJsResume.getData().setJsForeignLangKnowledges(this.getByResumeIdOrderByKnowledgeLevel_idDesc_FLanguage(id).getData());
 		return new SuccessDataResult<JsResume>(getJsResume.getData(), "[JsResumeService]> JsResume> Formatted JobSeeker's resume listed!");
 	}
 }

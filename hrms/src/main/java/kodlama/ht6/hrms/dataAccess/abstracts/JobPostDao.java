@@ -14,13 +14,13 @@ public interface JobPostDao extends JpaRepository<JobPost, Long>{
 	List<JobPost> findByClosingDateAfter(Date zonedDateTime); 
 	List<JobPost> findByActiveTrue();
 
-	List<JobPost> findByActiveTrueOrderByClosingDate();
-	List<JobPost> findByActiveTrueOrderByClosingDateDesc();
+	List<JobPost> findByActiveTrueOrderByPostingDate();
+	List<JobPost> findByActiveTrueOrderByPostingDateDesc();
 
-	List<JobPost> findByUserIdOrderByClosingDate(Long userId);
-	List<JobPost> findByUserIdOrderByClosingDateDesc(Long userId);
-	List<JobPost> findByUserIdAndActiveTrueOrderByClosingDate(Long userId);
-	List<JobPost> findByUserIdAndActiveTrueOrderByClosingDateDesc(Long userId);
+	List<JobPost> findByUserIdOrderByPostingDate(Long userId);
+	List<JobPost> findByUserIdOrderByPostingDateDesc(Long userId);
+	List<JobPost> findByUserIdAndActiveTrueOrderByPostingDate(Long userId);
+	List<JobPost> findByUserIdAndActiveTrueOrderByPostingDateDesc(Long userId);
 /*	
 	List<User> findTop3ByAge();
 	List<User> findByName(String name);

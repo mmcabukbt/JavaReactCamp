@@ -1,9 +1,10 @@
 package kodlama.ht6.hrms.business.concretes;
 
+import java.time.Instant;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import kodlama.ht6.hrms.business.abstracts.CityService;
@@ -57,7 +58,8 @@ public class JobPostManager implements JobPostService {
 				jobPostAddDto.getDescription(),
 				jobPostAddDto.getMinSalary(),
 				jobPostAddDto.getMaxSalary(),
-				java.sql.Date.valueOf(java.time.LocalDate.now()), //or on SQL DEFAULT now() column
+
+				Date.from(Instant.now()), //or on SQL DEFAULT now() column
 				jobPostAddDto.getClosingDate(),
 				jobPostAddDto.getOpenPositions(),
 				jobPostAddDto.isActive(), 
@@ -89,13 +91,7 @@ public class JobPostManager implements JobPostService {
 	public DataResult<List<JobPost>> getAll() {
 		return new SuccessDataResult<List<JobPost>>(this.jobPostDao.findAll(), "All JobPosts listed!");
 	}
-		
-	@Override
-	public DataResult<List<JobPost>> getAll_OrderByClosingDateDirection(boolean isDesc) {
-		Sort sort = Sort.by(isDesc ? Sort.Direction.DESC : Sort.Direction.ASC, "closingDate");
-		return new SuccessDataResult<List<JobPost>>(this.jobPostDao.findAll(sort), "All JobPosts listed! >> Ordered by "+ (isDesc? "DESC." : "ASC."));
-	}
-	
+
 	@Override
 	public DataResult<List<JobPost>> getAll_ByClosingDateAfter_Now() {
 		return new SuccessDataResult<List<JobPost>>(this.jobPostDao.findByClosingDateAfter(
@@ -107,20 +103,20 @@ public class JobPostManager implements JobPostService {
 		return new SuccessDataResult<List<JobPost>>(this.jobPostDao.findByActiveTrue(), "All ACTIVE JobPosts listed!");
 	}	//*///
 
-	public DataResult<List<JobPost>> getAllActive_OrderByClosingDateDirection(boolean isDesc) {
+	public DataResult<List<JobPost>> getAllActive_OrderByPostingDateDirection(boolean isDesc) {
 		return new SuccessDataResult<List<JobPost>>(				
-			isDesc ? this.jobPostDao.findByActiveTrueOrderByClosingDateDesc()
-				   : this.jobPostDao.findByActiveTrueOrderByClosingDate()
+			isDesc ? this.jobPostDao.findByActiveTrueOrderByPostingDateDesc()
+				   : this.jobPostDao.findByActiveTrueOrderByPostingDate()
 				, "All ACTIVE JobPosts listed! >> Ordered by "+ (isDesc? "DESC." : "ASC."));
 	}
 
 	@Override
-	public DataResult<List<JobPost>> getByUserIdOrderByClosingDateIsActiveDirection(Long userId, boolean isOnlyActive, boolean isDesc) {
+	public DataResult<List<JobPost>> getByUserIdOrderByPostingDateIsActiveDirection(Long userId, boolean isOnlyActive, boolean isDesc) {
 		return new SuccessDataResult<List<JobPost>>( isOnlyActive?				
-				isDesc ? this.jobPostDao.findByUserIdAndActiveTrueOrderByClosingDateDesc(userId)
-						: this.jobPostDao.findByUserIdAndActiveTrueOrderByClosingDate(userId)
-				: isDesc ? this.jobPostDao.findByUserIdOrderByClosingDateDesc(userId)
-						: this.jobPostDao.findByUserIdOrderByClosingDate(userId), "User's All " 
+				isDesc ? this.jobPostDao.findByUserIdAndActiveTrueOrderByPostingDateDesc(userId)
+						: this.jobPostDao.findByUserIdAndActiveTrueOrderByPostingDate(userId)
+				: isDesc ? this.jobPostDao.findByUserIdOrderByPostingDateDesc(userId)
+						: this.jobPostDao.findByUserIdOrderByPostingDate(userId), "User's All " 
 				+ (isOnlyActive? "ACTIVE ": "(ACTIVE + INACTIVE) ") + "JobPosts listed! >> Ordered by " 
 				+ (isDesc? "DESC." : "ASC."));
 	}

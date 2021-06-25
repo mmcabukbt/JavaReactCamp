@@ -1,6 +1,6 @@
 package kodlama.ht6.hrms.entities.concretes;
 
-import java.sql.Date;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -21,7 +21,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 @Table(name="job_posts")
-public @Data class JobPost {	
+public @Data class JobPost {
+	//private Date tarih; 
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id", nullable = false, updatable = false)
@@ -43,7 +45,7 @@ public @Data class JobPost {
 	@Column(name="max_salary", nullable = false)
 	private Double maxSalary;
 
-	@Column(name="posting_date", nullable = false)
+	@Column(name="posting_date", nullable = true)
 	private Date postingDate;
 
 	@Column(name="closing_date", nullable = false)

@@ -3,6 +3,7 @@ package kodlama.ht6.hrms.api.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,6 +20,7 @@ import kodlama.ht6.hrms.entities.concretes.City;
 import kodlama.ht6.hrms.entities.concretes.JobPost;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/api/jobPosts")	
 public class JobPostsController {
 	
@@ -46,17 +48,11 @@ public class JobPostsController {
 	public DataResult<JobPost> statusUpdate(@RequestBody JobPostStatusUpdateDto jobPostStatusUpdateDto){
 		return this.jobPostService.statusUpdate(jobPostStatusUpdateDto);
 	}
-
 	
 	@GetMapping("/getAll")		
 	public DataResult<List<JobPost>> getAll(){
 		return this.jobPostService.getAll();		
 	}
-
-	@GetMapping("/getAll_OrderByClosingDateDirection")		
-	public DataResult<List<JobPost>> getAll_OrderByClosingDateDirection(@RequestParam boolean isDesc){
-		return this.jobPostService.getAll_OrderByClosingDateDirection(isDesc);		
-	}	
 
 	@GetMapping("/getAll_ByClosingDateAfter_Now")		
 	public DataResult<List<JobPost>> getAll_ByClosingDateAfter_Now(){
@@ -68,15 +64,15 @@ public class JobPostsController {
 		return this.jobPostService.getAllActive();		
 	}
 
-	@GetMapping("/getAllActive_OrderByClosingDateDirection")		
-	public DataResult<List<JobPost>> getAllActive_OrderByClosingDateDirection(@RequestParam boolean isDesc){
-		return this.jobPostService.getAllActive_OrderByClosingDateDirection(isDesc);		
+	@GetMapping("/getAllActive_OrderByPostingDateDirection")		
+	public DataResult<List<JobPost>> getAllActive_OrderByPostingDateDirection(@RequestParam boolean isDesc){
+		return this.jobPostService.getAllActive_OrderByPostingDateDirection(isDesc);		
 	}
 	
-	@GetMapping("/getByUserIdOrderByClosingDateIsActiveDirection")		
-	public DataResult<List<JobPost>> getByUserIdOrderByClosingDateIsActiveDirection(
+	@GetMapping("/getByUserIdOrderByPostingDateIsActiveDirection")		
+	public DataResult<List<JobPost>> getByUserIdOrderByPostingDateIsActiveDirection(
 			@RequestParam Long userId, @RequestParam boolean isOnlyActive, @RequestParam boolean isDesc) {
-		return this.jobPostService.getByUserIdOrderByClosingDateIsActiveDirection(userId, isOnlyActive, isDesc);		
+		return this.jobPostService.getByUserIdOrderByPostingDateIsActiveDirection(userId, isOnlyActive, isDesc);		
 	}
 
 }
