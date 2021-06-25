@@ -19,12 +19,12 @@ public @Data class Industry {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id", nullable = false, updatable = false)
-	private int id;
+	private Short id;
 	
 	@Column(name="name")
 	private String name;
 
-	public Industry(int id) {
+	public Industry(Short id) {
 		super();
 		this.id = id;
 	}

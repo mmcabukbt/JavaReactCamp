@@ -7,7 +7,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public @Data class JobPostStatusUpdateDto {
-	private long jobPostId;
-	private long userId;
+	
+	private Long jobPostId;
+	private Long userId;
 	private boolean active;
 }

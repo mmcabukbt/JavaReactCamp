@@ -27,10 +27,10 @@ public class StaffManager implements StaffService{
 	@Override
 	public  DataResult<Staff> add(Staff staff) {
 		List<Claim> defClaims = new ArrayList<Claim> ();
-		defClaims.add(new Claim(32730)); //  Unconfirmed User
-		defClaims.add(new Claim(32740)); //  Unconfirmed Staff
+		defClaims.add(new Claim((short) 32730)); //  Unconfirmed User
+		defClaims.add(new Claim((short) 32740)); //  Unconfirmed Staff
 		staff.setClaims(defClaims);
-		staff.setJob(new Job(1));
+		staff.setJob(new Job((short) 1));
 		return new SuccessDataResult<Staff>(this.staffDao.save(staff), "Staff successfully added");
 	}
 	

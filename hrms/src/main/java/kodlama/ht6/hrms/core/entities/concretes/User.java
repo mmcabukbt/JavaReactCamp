@@ -32,7 +32,7 @@ public @Data class User implements User_{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id", updatable = false, nullable = false)
-	private long id;
+	private Long id;
 
 	@Column(name = "email")
 	private String email;

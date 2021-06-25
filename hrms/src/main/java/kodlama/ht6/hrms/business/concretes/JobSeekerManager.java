@@ -27,8 +27,8 @@ public class JobSeekerManager implements JobSeekerService{
 	@Override
 	public DataResult<JobSeeker> add(JobSeeker jobSeeker) {
 		List<Claim> defClaims = new ArrayList<Claim> ();
-		defClaims.add(new Claim(32730)); //  Unconfirmed User
-		defClaims.add(new Claim(32760)); //  Unconfirmed JobSeeker
+		defClaims.add(new Claim((short) 32730)); //  Unconfirmed User
+		defClaims.add(new Claim((short) 32760)); //  Unconfirmed JobSeeker
 		jobSeeker.setClaims(defClaims);		
 		return new SuccessDataResult<JobSeeker>(this.jobSeekerDao.save(jobSeeker), "JobSeeker successfully added");
 	}

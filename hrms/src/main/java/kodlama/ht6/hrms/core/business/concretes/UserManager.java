@@ -46,7 +46,7 @@ public class UserManager implements UserService {
 	}
 
 	@Override
-	public DataResult<User> getUser(long id) {
+	public DataResult<User> getById(Long id) {
 		User getUser = this.userDao.getByid(id);
 		return getUser == null ? new ErrorDataResult<User>(null, "[UserService]> User> Not found!")
 				: new SuccessDataResult<User>(getUser, "[UserService]> User> Already exists!");
@@ -81,10 +81,8 @@ public class UserManager implements UserService {
 			return new ErrorDataResult<User>(getUserResult.getData(), "[UserService]> User> Already Activated!");
 		}
 		getUserResult.getData().setActive(true);
-		getUserResult.getData().getClaims().set(0,
-				new Claim(getUserResult.getData().getClaims().get(0).getId() - 32700));
-		getUserResult.getData().getClaims().set(1,
-				new Claim(getUserResult.getData().getClaims().get(1).getId() - 32700));
+		getUserResult.getData().getClaims().set(0, new Claim((short) (getUserResult.getData().getClaims().get(0).getId() - 32700)));
+		getUserResult.getData().getClaims().set(1, new Claim((short) (getUserResult.getData().getClaims().get(1).getId() - 32700)));
 		this.userDao.save(getUserResult.getData());
 		this.unconfirmedUserDao.deleteById(getUserResult.getData().getId());
 		return new SuccessDataResult<User>(getUserResult.getData(), "[UserService]> User> Activated!");

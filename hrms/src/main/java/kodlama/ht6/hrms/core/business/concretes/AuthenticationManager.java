@@ -55,7 +55,7 @@ public class AuthenticationManager implements AuthenticationService {
 		if (!checkStaff.isSuccess()) {
 			return checkStaff;
 		}
-		Staff staff = new Staff(0, stRegisterDto.getEmail(), null, null, false, null, stRegisterDto.getTckNo(),
+		Staff staff = new Staff(0L, stRegisterDto.getEmail(), null, null, false, null, stRegisterDto.getTckNo(),
 				stRegisterDto.getFirstName(), stRegisterDto.getLastName(), stRegisterDto.getYearOfBirth(), null, 0.0);
 		try {
 			this.hashingService.createPassword(staff, stRegisterDto.getPassword());
@@ -72,7 +72,7 @@ public class AuthenticationManager implements AuthenticationService {
 		if (!checkJobSeeker.isSuccess()) {
 			return checkJobSeeker;
 		}
-		JobSeeker jobSeeker = new JobSeeker(0, jsRegisterDto.getEmail(), null, null, false, null, jsRegisterDto.getTckNo(),
+		JobSeeker jobSeeker = new JobSeeker(0L, jsRegisterDto.getEmail(), null, null, false, null, jsRegisterDto.getTckNo(),
 				jsRegisterDto.getFirstName(), jsRegisterDto.getLastName(), jsRegisterDto.getYearOfBirth(), false);
 		try {
 			this.hashingService.createPassword(jobSeeker, jsRegisterDto.getPassword());
@@ -89,7 +89,7 @@ public class AuthenticationManager implements AuthenticationService {
 		if (!checkEmployer.isSuccess()) {
 			return checkEmployer;
 		}
-		Employer employer = new Employer(0, emRegisterDto.getEmail(), null, null, false, null, emRegisterDto.getCompanyName(),
+		Employer employer = new Employer(0L, emRegisterDto.getEmail(), null, null, false, null, emRegisterDto.getCompanyName(),
 				emRegisterDto.getWebsite(), emRegisterDto.getPhone(), null);
 		try {
 			this.hashingService.createPassword(employer, emRegisterDto.getPassword());

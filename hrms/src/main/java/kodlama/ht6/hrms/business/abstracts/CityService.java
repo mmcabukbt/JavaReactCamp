@@ -7,7 +7,7 @@ import kodlama.ht6.hrms.entities.concretes.City;
 
 public interface CityService {
 		
-	DataResult<City> getCity(Integer id);
+	DataResult<City> getById(Short id);
 	
 	DataResult<List<City>> getAll();
 }

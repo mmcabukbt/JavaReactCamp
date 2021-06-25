@@ -9,13 +9,14 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public @Data class JobPostAddDto {	
-	private long userId;
+	
+	private Long userId;
 	private String description;
-	private double minSalary;
-	private double maxSalary;
+	private Double minSalary;
+	private Double maxSalary;
 	private Date closingDate;
-	private int openPositions;
+	private Short openPositions;
 	private boolean active;
-	private int jobId;
-	private int cityId;
+	private Short jobId;
+	private Short cityId;
 }

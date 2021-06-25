@@ -27,7 +27,7 @@ public @Data class Corporate extends User {
 	@Column(name="phone")
 	private String phone;
 
-	public Corporate(long id, String email, byte[] passwordHash, byte[] passwordSalt, boolean active, List<Claim> claims,
+	public Corporate(Long id, String email, byte[] passwordHash, byte[] passwordSalt, boolean active, List<Claim> claims,
 			String name, String website, String phone) {
 		super(id, email, passwordHash, passwordSalt, active, claims );
 		this.name = name;

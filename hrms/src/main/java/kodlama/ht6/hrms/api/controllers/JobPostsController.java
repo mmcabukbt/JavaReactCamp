@@ -10,10 +10,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import kodlama.ht6.hrms.business.abstracts.CityService;
 import kodlama.ht6.hrms.business.abstracts.JobPostService;
 import kodlama.ht6.hrms.core.utilities.results.DataResult;
 import kodlama.ht6.hrms.entities.Dtos.JobPostAddDto;
 import kodlama.ht6.hrms.entities.Dtos.JobPostStatusUpdateDto;
+import kodlama.ht6.hrms.entities.concretes.City;
 import kodlama.ht6.hrms.entities.concretes.JobPost;
 
 @RestController
@@ -21,11 +23,18 @@ import kodlama.ht6.hrms.entities.concretes.JobPost;
 public class JobPostsController {
 	
 	private final JobPostService jobPostService;
+	private final CityService cityService;
 	
 	@Autowired
-	public JobPostsController(JobPostService jobPostService) {
+	public JobPostsController(JobPostService jobPostService, CityService cityService) {
 		super();
 		this.jobPostService = jobPostService;
+		this.cityService = cityService;
+	}
+	
+	@GetMapping("/getCities")
+	public DataResult<List<City>> getCities() {
+		return this.cityService.getAll();
 	}
 	
 	@PostMapping("/add")		
@@ -66,7 +75,7 @@ public class JobPostsController {
 	
 	@GetMapping("/getByUserIdOrderByClosingDateIsActiveDirection")		
 	public DataResult<List<JobPost>> getByUserIdOrderByClosingDateIsActiveDirection(
-			@RequestParam long userId, @RequestParam boolean isOnlyActive, @RequestParam boolean isDesc) {
+			@RequestParam Long userId, @RequestParam boolean isOnlyActive, @RequestParam boolean isDesc) {
 		return this.jobPostService.getByUserIdOrderByClosingDateIsActiveDirection(userId, isOnlyActive, isDesc);		
 	}
 

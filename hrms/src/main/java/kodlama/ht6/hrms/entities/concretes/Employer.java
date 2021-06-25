@@ -26,7 +26,7 @@ public @Data class Employer extends Corporate {
 	private Industry sector; //*////
 
 	
-	public Employer(long id, String email, byte[] passwordHash, byte[] passwordSalt, boolean active, List<Claim> claims,
+	public Employer(Long id, String email, byte[] passwordHash, byte[] passwordSalt, boolean active, List<Claim> claims,
 			String name, String website, String phone, Industry sector) {
 		super(id, email, passwordHash, passwordSalt, active, claims, name, website, phone);
 		this.sector = sector;

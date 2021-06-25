@@ -23,8 +23,8 @@ public @Data class JobSeeker extends Person {
 	@Column(name="jobseek_status")
 	private boolean jobseekStatus;
 
-	public JobSeeker(long id, String email, byte[] passwordHash, byte[] passwordSalt, boolean active, List<Claim> claims, 
-			String tckNo, String firstName, String lastName, int yearOfBirth, boolean jobseekStatus) {
+	public JobSeeker(Long id, String email, byte[] passwordHash, byte[] passwordSalt, boolean active, List<Claim> claims, 
+			String tckNo, String firstName, String lastName, Short yearOfBirth, Boolean jobseekStatus) {
 		super(id, email, passwordHash, passwordSalt, active, claims, tckNo, firstName, lastName, yearOfBirth);
 		this.jobseekStatus = jobseekStatus;
 	}

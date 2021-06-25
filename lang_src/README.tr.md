@@ -39,3 +39,8 @@
 ### Spring JPA/Hibernate
 * [Kurs 8 - northwind ~ Güncellemeler..](/northwind/src/main/java/kodlamaio/northwind)
   * [Ödev #1 ~ Güncellemeler..](/hrms/src/main/java/kodlama/ht6/hrms)
+  
+### Spring AOP
+* [Kurs 9 - northwind ~ Güncellemeler..](/northwind/src/main/java/kodlamaio/northwind)
+  * [Ödev #1 ~ Güncellemeler..](/hrms/src/main/java/kodlama/ht6/hrms)
+  * [Ödev #2 ve Kaynak ~ Güncellemeleri..](/hrms/src/main/java/kodlama/ht6/hrms)

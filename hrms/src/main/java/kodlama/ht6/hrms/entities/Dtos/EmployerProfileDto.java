@@ -9,5 +9,5 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper = true)
 public @Data class EmployerProfileDto extends CorporateRegisterDto{
 
-	private int sectorId;
+	private Short sectorId;
 }

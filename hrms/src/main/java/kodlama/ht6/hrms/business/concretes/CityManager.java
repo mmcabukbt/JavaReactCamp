@@ -27,7 +27,7 @@ public class CityManager implements CityService {
 	}
 
 	@Override
-	public DataResult<City> getCity(Integer id) {
+	public DataResult<City> getById(Short id) {
 		City getCity = this.cityDao.getByid(id);
 		return getCity == null ? new ErrorDataResult<City>(null, "[CityService]> City> Not found!")
 				: new SuccessDataResult<City>(getCity, "[CityService]> City> Already exists!");

@@ -5,9 +5,6 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import kodlama.ht6.hrms.core.entities.concretes.User;
-import kodlama.ht6.hrms.core.utilities.results.DataResult;
-import kodlama.ht6.hrms.entities.concretes.City;
 import kodlama.ht6.hrms.entities.concretes.JobPost;
 
 public interface JobPostDao extends JpaRepository<JobPost, Long>{
@@ -20,10 +17,10 @@ public interface JobPostDao extends JpaRepository<JobPost, Long>{
 	List<JobPost> findByActiveTrueOrderByClosingDate();
 	List<JobPost> findByActiveTrueOrderByClosingDateDesc();
 
-	List<JobPost> findByUserIdOrderByClosingDate(long userId);
-	List<JobPost> findByUserIdOrderByClosingDateDesc(long userId);
-	List<JobPost> findByUserIdAndActiveTrueOrderByClosingDate(long userId);
-	List<JobPost> findByUserIdAndActiveTrueOrderByClosingDateDesc(long userId);
+	List<JobPost> findByUserIdOrderByClosingDate(Long userId);
+	List<JobPost> findByUserIdOrderByClosingDateDesc(Long userId);
+	List<JobPost> findByUserIdAndActiveTrueOrderByClosingDate(Long userId);
+	List<JobPost> findByUserIdAndActiveTrueOrderByClosingDateDesc(Long userId);
 /*	
 	List<User> findTop3ByAge();
 	List<User> findByName(String name);

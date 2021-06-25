@@ -1,0 +1,279 @@
+1,1C:Enterprise script
+2,4th Dimension/4D: 4D - 4th Dimension
+3,ABAP
+4,ABC: ABC (exceptions: -tv -channel)
+5,ActionScript: ActionScript - AS1 - AS2 - AS3
+6,Ada
+7,Agilent VEE
+8,Algol
+9,Alice: Alice (confidence: 90%)
+10,Android
+11,Angelscript
+12,Angular
+13,Apex
+14,APL
+15,Applescript
+16,Arc
+17,AspectJ
+18,Assembly language: Assembly - Assembly language
+19,ATLAS
+20,AutoHotkey: AutoHotkey - AHK
+21,AutoIt
+22,AutoLISP
+23,Automator
+24,Avenue
+25,Awk: Awk - Mawk - Gawk - Nawk
+26,B4X
+27,Ballerina
+28,Bash
+29,Basic: Basic (confidence: 0%)
+30,BBC BASIC
+31,bc
+32,BCPL
+33,BETA: BETA (confidence: 10%)
+34,BlitzMax: BlitzMax - BlitzBasic - Blitz Basic
+35,Boo
+36,Bourne shell: Bourne shell - sh
+37,Brainfuck
+38,C shell: Csh - C shell (confidence: 90%)
+39,C#: C# - C-Sharp - C Sharp - CSharp - CSharp.NET - C#.NET
+40,"C: C (exceptions: -""Objective-C"")"
+41,C++
+42,C++/CLI
+43,Caml
+44,Ceylon
+45,CFML: CFML - ColdFusion
+46,cg -computer game - computer graphics
+47,Ch: Ch (exceptions: +ChScite)
+48,Chapel: Chapel (exceptions: -christ)
+49,CHILL
+50,CIL
+51,CL (OS/400): CL (exceptions: -Lisp) - CLLE
+52,Clarion
+53,Clean: Clean (confidence: 43%)
+54,CLIPS
+55,Clipper
+56,Clojure: Clojure - ClojureScript
+57,CLU
+58,COBOL
+59,Cobra
+60,CoffeeScript
+61,COMAL
+62,C-Omega
+63,Common Lisp
+64,Crystal: Crystal  - crystallang
+65,cT
+66,Curl
+67,D 3-D programming - DTrace - dlang
+68,Dart
+69,DCL
+70,Delphi/Object Pascal: DwScript - Delphi.NET - Pascal
+71,DiBOL: DBL - Synergy/DE - DIBOL
+72,Dylan
+73,E: E (exceptions: +specman)
+74,ECMAScript
+75,EGL
+76,Eiffel
+77,Elixir
+78,Elm
+79,Emacs Lisp: Emacs Lisp - Elips
+80,Emerald
+81,Erlang
+82,Etoys
+83,Euphoria
+84,EXEC
+85,F#: F# - F-Sharp - FSharp - F Sharp
+86,Factor
+87,Falcon
+88,Fantom
+89,Felix: Felix (confidence: 86%)
+90,Forth
+91,Fortran
+92,Fortress
+93,FoxPro - Visual FoxPro - VFP
+94,FreeBASIC
+95,Gambas
+96,GAMS
+97,GLSL
+98,GML: GML - GameMaker Language
+99,GNU Octave
+100,Go: Go - Golang
+101,Gosu
+102,Groovy: Groovy - GPATH - GSQL - Groovy++
+103,Hack
+104,Harbour
+105,Haskell
+106,Haxe
+107,Heron
+108,HPL
+109,HyperTalk
+110,Icon: Icon (confidence: 90%)
+111,IDL: IDL (exceptions: -corba -interface)
+112,Idris
+113,Inform
+114,Informix-4GL
+115,INTERCAL
+116,Io
+117,Ioke
+118,J#
+119,J: J (confidence: 50%)
+120,JADE
+121,Java
+122,JavaFX Script
+123,JavaScript: JavaScript - JS - SSJS
+124,JScript
+125,JScript.NET
+126,Julia: Julia - Julialang - julia-lang
+127,Korn shell: Korn shell - ksh
+128,Kotlin
+129,LabVIEW
+130,Ladder Logic
+131,Lasso
+132,Limbo
+133,Lingo
+134,Lisp
+135,LiveCode: Revolution - LiveCode
+136,Logo: Logo (confidence: 90% - exceptions: -tv)
+137,LotusScript
+138,LPC
+139,Lua: Lua - LuaJIT
+140,Lustre
+141,M4
+142,MAD: MAD (confidence: 50%)
+143,Magic: Magic (confidence: 50%)
+144,Magik
+145,Malbolge
+146,MANTIS
+147,Maple
+148,MATLAB
+149,Max/MSP
+150,MAXScript
+151,MDX
+152,MEL
+153,Mercury
+154,Miva
+155,ML
+156,Mobile Programming
+157,Modula-2
+158,Modula-3
+159,Monkey
+160,MOO
+161,Moto
+162,MQL4: MQL4 - MQL5
+163,MS-DOS batch
+164,MUMPS
+165,NATURAL
+166,Nemerle
+167,NetLogo
+168,Nim: Nim - Nimrod
+169,NQC
+170,NSIS
+171,NXT-G
+172,Oberon
+173,Object Rexx
+174,Objective-C: Objective-C - objc - obj-c
+175,OCaml: Objective Caml - OCaml
+176,Occam
+177,OpenCL
+178,OpenEdge ABL: Progress - Progress 4GL - ABL - OpenEdge
+179,OPL
+180,Oxygene
+181,Oz
+182,Paradox
+183,Pascal: Pascal (confidence: 5%)
+184,Perl
+185,PHP
+186,PILOT:Palm Pilot programming
+187,Pike
+188,PL/I: PL/1 - PL/I
+189,PL/SQL
+190,Pliant
+191,Pony
+192,PostScript: PostScript - PS
+193,POV-Ray
+194,PowerBasic
+195,PowerScript
+196,PowerShell
+197,"Processing: Processing (exceptions: +""sketchbook"")"
+198,Programming Without Coding Technology - PWCT
+199,Prolog
+200,Pure Data: Pure Data - PD
+201,PureBasic
+202,Python
+203,Q
+204,"R: R (confidence: 90% - exceptions: +""statistical"")"
+205,Racket
+206,Raku: Perl 6 - Raku
+207,React
+208,REBOL
+209,Red: Red (confidence: 20%)
+210,REXX
+211,Ring
+212,RPG- RPGLE - ILERPG - RPGIV - RPGIII - RPG400 - RPGII - RPG4
+213,Ruby
+214,Rust: Rust - Rustlang
+215,S: S (exceptions: +statistical)
+216,SAS
+217,Sather
+218,Scala
+219,Scheme: Scheme (exceptions: -tv -channel)
+220,Scratch
+221,sed
+222,Seed7
+223,SIGNAL: SIGNAL (confidence: 10%)
+224,Simula
+225,Simulink
+226,Slate: Slate (confidence: 57%)
+227,Small Basic
+228,Smalltalk
+229,Smarty
+230,Snap!
+231,SNOBOL
+232,Solidity
+233,SPARK
+234,S-PLUS: S-PLUS (exceptions: +statistical)
+235,SPSS
+236,SQL
+237,SQR
+238,Squeak
+239,Squirrel
+240,Standard ML: Standard ML - SML
+241,Stata
+242,Structured Text
+243,Suneido
+244,SuperCollider: SuperCollider (confidence: 80%)
+245,Swift
+246,TACL
+247,Tcl: Tcl/Tk - Tcl
+248,tcsh
+249,Tex
+250,thinBasic
+251,TOM: TOM (confidence: 50%)
+252,Transact-SQL: T-SQL - Transact-SQL - TSQL
+253,TypeScript: TypeScript - TS
+254,Uniface
+255,Vala/Genie: Vala - Genie
+256,VBScript
+257,Verilog
+258,VHDL
+259,Visual Basic Classic  - VB  - VBA - VB6
+260,Visual Basic .NET - VB.NET - Visual Basic - VB
+261,Vue
+262,WebAssembly
+263,WebDNA
+264,Whitespace
+265,Wolfram
+266,X10
+267,xBase
+268,XBase++
+269,XC
+270,Xen
+271,Xojo: REALbasic - Xojo
+272,XPL
+273,XQuery
+274,XSLT
+275,Xtend
+276,yacc
+277,Yorick
+278,Z shell: Z shell - zsh
+279,Zig: Zig - zlang

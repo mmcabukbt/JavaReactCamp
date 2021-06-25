@@ -8,7 +8,7 @@ import kodlama.ht6.hrms.core.utilities.results.Result;
 public interface UserService {
 
 	DataResult<User> getUser(String email);
-	DataResult<User> getUser(long id);
+	DataResult<User> getById(Long id);
 	
 	Result addUnconfirmedUser(Long uId, String email);
 	

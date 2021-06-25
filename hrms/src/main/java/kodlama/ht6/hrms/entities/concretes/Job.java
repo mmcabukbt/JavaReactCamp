@@ -21,13 +21,13 @@ public @Data class Job {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id", nullable = false, updatable = false)
-	private int id;
+	private Short id;
 /*	
 	@Column(name="industry_id")
 	private int industryId;
 //*///	
 	@Column(name="sub_job_category_id")
-	private int subJobCategoryId;
+	private Short subJobCategoryId;
 
 	@Column(name="title", unique = true)
 	private String title;
@@ -36,7 +36,7 @@ public @Data class Job {
 	@JoinColumn(name="industry_id", nullable = false, updatable = false)
 	private Industry industry;
 
-	public Job(int id) {
+	public Job(Short id) {
 		super();
 		this.id = id;
 	}

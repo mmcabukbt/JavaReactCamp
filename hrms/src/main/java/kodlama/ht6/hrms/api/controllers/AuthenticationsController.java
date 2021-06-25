@@ -68,7 +68,7 @@ public class AuthenticationsController {
 	}
 
 	@GetMapping("/activation_GET")
-	public Result activateUser(@RequestParam String email, @RequestParam int confirmId) {
+	public Result activateUser(@RequestParam String email, @RequestParam Long confirmId) {
 		return this.authenticationService.activateUser(new UnconfirmedUser(confirmId, email, null));
 	}
 

@@ -25,7 +25,7 @@ public @Data class JobPost {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id", nullable = false, updatable = false)
-	private long id;
+	private Long id;
 /*
 	@Column(name="user_id", nullable = false)
 	private long userId;
@@ -38,10 +38,10 @@ public @Data class JobPost {
 	private String description;
 	
 	@Column(name="min_salary", nullable = false)
-	private double minSalary;
+	private Double minSalary;
 
 	@Column(name="max_salary", nullable = false)
-	private double maxSalary;
+	private Double maxSalary;
 
 	@Column(name="posting_date", nullable = false)
 	private Date postingDate;
@@ -49,8 +49,8 @@ public @Data class JobPost {
 	@Column(name="closing_date", nullable = false)
 	private Date closingDate;
 	
-	@Column(name="open_positions", nullable = false)
-	private int openPositions;
+	@Column(name="open_positions", nullable = false) 
+	private Short openPositions;
 	
 	@Column(name="active", nullable = false)
 	private boolean active;
@@ -62,5 +62,4 @@ public @Data class JobPost {
 	@ManyToOne(optional = false)
 	@JoinColumn(name="city_id", nullable = false, updatable = false)
 	private City city;
-
 }

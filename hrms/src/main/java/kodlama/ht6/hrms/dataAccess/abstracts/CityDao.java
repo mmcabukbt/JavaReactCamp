@@ -4,7 +4,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import kodlama.ht6.hrms.entities.concretes.City;
 
-public interface CityDao extends JpaRepository<City, Integer>{
+public interface CityDao extends JpaRepository<City, Short>{
 
-	City getByid(Integer id);
+	City getByid(Short id);
 }

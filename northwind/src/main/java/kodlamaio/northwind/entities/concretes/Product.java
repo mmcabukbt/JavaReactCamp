@@ -10,8 +10,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import org.springframework.web.jsf.FacesContextUtils;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -41,7 +39,7 @@ public @Data class Product {
 	@Column(name="quantity_per_unit")
 	private String quantityPerUnit;
 	
-	@ManyToOne()
+	@ManyToOne() //??fetch = FetchType.LAZY
 	@JoinColumn(name = "category_id")
 	private Category category;
 }

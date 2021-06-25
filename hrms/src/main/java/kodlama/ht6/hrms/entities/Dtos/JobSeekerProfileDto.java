@@ -10,5 +10,5 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper = true)
 public @Data class JobSeekerProfileDto extends PersonRegisterDto{
 	
-	private boolean jobseekStatus;
+	private Boolean jobseekStatus;
 }

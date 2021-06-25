@@ -11,8 +11,8 @@ import lombok.NoArgsConstructor;
 public @Data class StaffProfileDto extends PersonRegisterDto {
 	
 	@JsonIgnore
-	private int jobId;
+	private Short jobId;
 	
 //	@JsonIgnore
-	private double salary;
+	private Double salary;
 }

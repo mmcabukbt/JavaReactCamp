@@ -20,7 +20,7 @@ public @Data class City {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id", nullable = false, updatable = false)
-	private int id;
+	private Short id;
 	
 	@Column(name="name")
 	private String name;

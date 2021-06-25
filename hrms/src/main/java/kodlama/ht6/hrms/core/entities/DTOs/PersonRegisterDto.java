@@ -11,5 +11,5 @@ public @Data class PersonRegisterDto extends UserRegisterDto {
 	private String tckNo;
 	private String firstName;
 	private String lastName;
-	private int yearOfBirth;
+	private Short yearOfBirth;
 } 

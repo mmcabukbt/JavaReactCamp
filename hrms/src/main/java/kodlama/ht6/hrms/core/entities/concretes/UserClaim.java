@@ -16,8 +16,8 @@ import lombok.NoArgsConstructor;
 public @Data class UserClaim {
 	@Id
 	@Column(name = "user_id", nullable = false, updatable = false)
-	private long userId;
+	private Long userId;
 
 	@Column(name = "claim_id")
-	private int claimId;
+	private Short claimId;
 }

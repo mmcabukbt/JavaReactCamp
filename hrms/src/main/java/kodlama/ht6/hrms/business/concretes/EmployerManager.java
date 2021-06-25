@@ -33,10 +33,10 @@ public class EmployerManager implements EmployerService{
 	@Override
 	public DataResult<Employer> add(Employer employer) {
 		List<Claim> defClaims = new ArrayList<Claim> ();
-		defClaims.add(new Claim(32730)); //  Unconfirmed User
-		defClaims.add(new Claim(32750)); //  Unconfirmed Employer
+		defClaims.add(new Claim((short) 32730)); //  Unconfirmed User
+		defClaims.add(new Claim((short) 32750)); //  Unconfirmed Employer
 		employer.setClaims(defClaims);
-		employer.setSector(new Industry(3));
+		employer.setSector(new Industry((short) 3));
 		return new SuccessDataResult<Employer>(this.employerDao.save(employer), "Employer successfully added");
 	}
 }

@@ -28,10 +28,10 @@ public @Data class Person extends User {
 	private String lastName;
 	
 	@Column(name="year_of_birth")
-	private int yearOfBirth;
+	private Short yearOfBirth;
 
-	public Person(long id, String email, byte[] passwordHash, byte[] passwordSalt, boolean active,
-			List<Claim> claims,	String tckNo, String firstName, String lastName, int yearOfBirth) {
+	public Person(Long id, String email, byte[] passwordHash, byte[] passwordSalt, boolean active,
+			List<Claim> claims,	String tckNo, String firstName, String lastName, Short yearOfBirth) {
 		super(id, email, passwordHash, passwordSalt, active, claims);
 		this.tckNo = tckNo;
 		this.firstName = firstName;

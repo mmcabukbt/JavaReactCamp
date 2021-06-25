@@ -9,7 +9,7 @@ public interface JobService {
 	
 	DataResult<Job> add(Job job);
 	
-	DataResult<Job> getJob(int id);	
+	DataResult<Job> getById(Short id);	
 	
 	DataResult<List<Job>> getAll();
 	

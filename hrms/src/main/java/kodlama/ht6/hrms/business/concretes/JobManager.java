@@ -32,7 +32,7 @@ public class JobManager implements JobService{
 	}
 	
 	@Override
-	public DataResult<Job> getJob(int id) {
+	public DataResult<Job> getById(Short id) {
 		Job getJob = this.jobDao.getByid(id);
 		return getJob == null ? new ErrorDataResult<Job>(null, "[JobService]> Job> Not found!")
 				: new SuccessDataResult<Job>(getJob, "[JobService]> Job> Already exists!");

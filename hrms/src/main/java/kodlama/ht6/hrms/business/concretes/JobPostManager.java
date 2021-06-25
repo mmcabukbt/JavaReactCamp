@@ -40,24 +40,24 @@ public class JobPostManager implements JobPostService {
 
 	@Override
 	public DataResult<JobPost> add(JobPostAddDto jobPostAddDto) {
-		DataResult<User> userExist = this.userService.getUser(jobPostAddDto.getUserId());
+		DataResult<User> userExist = this.userService.getById(jobPostAddDto.getUserId());
 		if (!userExist.isSuccess()) {
 			return new ErrorDataResult<JobPost>(null, userExist.getMessage());
 		}
-		DataResult<Job> jobExist = this.jobService.getJob(jobPostAddDto.getJobId());
+		DataResult<Job> jobExist = this.jobService.getById(jobPostAddDto.getJobId());
 		if (!jobExist.isSuccess()) {
 			return new ErrorDataResult<JobPost>(null, jobExist.getMessage());
 		}
-		DataResult<City> cityExist = this.cityService.getCity(jobPostAddDto.getCityId());
+		DataResult<City> cityExist = this.cityService.getById(jobPostAddDto.getCityId());
 		if (!cityExist.isSuccess()) {
 			return new ErrorDataResult<JobPost>(null, cityExist.getMessage());
 		}
-		JobPost jobPost = new JobPost(0, 
+		JobPost jobPost = new JobPost(0L, 
 				userExist.getData(), 
 				jobPostAddDto.getDescription(),
 				jobPostAddDto.getMinSalary(),
 				jobPostAddDto.getMaxSalary(),
-				java.sql.Date.valueOf(java.time.LocalDate.now()), 
+				java.sql.Date.valueOf(java.time.LocalDate.now()), //or on SQL DEFAULT now() column
 				jobPostAddDto.getClosingDate(),
 				jobPostAddDto.getOpenPositions(),
 				jobPostAddDto.isActive(), 
@@ -67,7 +67,7 @@ public class JobPostManager implements JobPostService {
 	
 	@Override
 	public DataResult<JobPost> statusUpdate(JobPostStatusUpdateDto jobPostStatusUpdateDto) {
-		DataResult<JobPost> JobPostExist = this.getJobPost(jobPostStatusUpdateDto.getJobPostId());
+		DataResult<JobPost> JobPostExist = this.getById(jobPostStatusUpdateDto.getJobPostId());
 		if (!JobPostExist.isSuccess()) {
 			return new ErrorDataResult<JobPost>(null, JobPostExist.getMessage());
 		}
@@ -79,7 +79,7 @@ public class JobPostManager implements JobPostService {
 	}
 	
 	@Override
-	public DataResult<JobPost> getJobPost(Long id) {
+	public DataResult<JobPost> getById(Long id) {
 		JobPost getJobPost = this.jobPostDao.getByid(id);
 		return getJobPost == null ? new ErrorDataResult<JobPost>(null, "[JobPostService]> JobPost> Not found!")
 				: new SuccessDataResult<JobPost>(getJobPost, "[JobPostService]> JobPost> Already exists!");
@@ -93,7 +93,7 @@ public class JobPostManager implements JobPostService {
 	@Override
 	public DataResult<List<JobPost>> getAll_OrderByClosingDateDirection(boolean isDesc) {
 		Sort sort = Sort.by(isDesc ? Sort.Direction.DESC : Sort.Direction.ASC, "closingDate");
-		return new SuccessDataResult<List<JobPost>>(this.jobPostDao.findAll(sort), "All JobPosts Ordered listed!(Ordered By ASC or DESC)");
+		return new SuccessDataResult<List<JobPost>>(this.jobPostDao.findAll(sort), "All JobPosts listed! >> Ordered by "+ (isDesc? "DESC." : "ASC."));
 	}
 	
 	@Override
@@ -111,16 +111,17 @@ public class JobPostManager implements JobPostService {
 		return new SuccessDataResult<List<JobPost>>(				
 			isDesc ? this.jobPostDao.findByActiveTrueOrderByClosingDateDesc()
 				   : this.jobPostDao.findByActiveTrueOrderByClosingDate()
-				, "All ACTIVE JobPosts listed! (Ordered By ASC or DESC)");
+				, "All ACTIVE JobPosts listed! >> Ordered by "+ (isDesc? "DESC." : "ASC."));
 	}
 
 	@Override
-	public DataResult<List<JobPost>> getByUserIdOrderByClosingDateIsActiveDirection(long userId, boolean isOnlyActive, boolean isDesc) {
+	public DataResult<List<JobPost>> getByUserIdOrderByClosingDateIsActiveDirection(Long userId, boolean isOnlyActive, boolean isDesc) {
 		return new SuccessDataResult<List<JobPost>>( isOnlyActive?				
 				isDesc ? this.jobPostDao.findByUserIdAndActiveTrueOrderByClosingDateDesc(userId)
 						: this.jobPostDao.findByUserIdAndActiveTrueOrderByClosingDate(userId)
 				: isDesc ? this.jobPostDao.findByUserIdOrderByClosingDateDesc(userId)
-						: this.jobPostDao.findByUserIdOrderByClosingDate(userId)
-						, "User's All (ACTIVE or INACTIVE JobPosts listed! (Ordered By ASC or DESC)");
+						: this.jobPostDao.findByUserIdOrderByClosingDate(userId), "User's All " 
+				+ (isOnlyActive? "ACTIVE ": "(ACTIVE + INACTIVE) ") + "JobPosts listed! >> Ordered by " 
+				+ (isDesc? "DESC." : "ASC."));
 	}
 }

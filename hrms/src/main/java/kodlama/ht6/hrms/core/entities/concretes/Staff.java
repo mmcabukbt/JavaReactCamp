@@ -21,20 +21,17 @@ import lombok.NoArgsConstructor;
 @PrimaryKeyJoinColumn(name = "user_id")
 @EqualsAndHashCode(callSuper = true)
 public @Data class Staff extends Person {
-/*	
-	@Column(name="job_id")
-	private int jobId;
-//*///	
+
 	@Column(name="salary")
-	private double salary;
+	private Double salary;
 	
 	@ManyToOne(optional = false)
 	@JoinColumn(name="job_id", nullable = false, updatable = false)
-	private Job job; //*////
+	private Job job;
 
 
-	public Staff(long id, String email, byte[] passwordHash, byte[] passwordSalt, boolean active, List<Claim> claims, 
-			String tckNo, String firstName, String lastName, int yearOfBirth, Job job, double salary) {
+	public Staff(Long id, String email, byte[] passwordHash, byte[] passwordSalt, boolean active, List<Claim> claims, 
+			String tckNo, String firstName, String lastName, Short yearOfBirth, Job job, Double salary) {
 		super(id, email, passwordHash, passwordSalt, active, claims, tckNo, firstName, lastName, yearOfBirth);
 		this.job = job;
 		this.salary = salary;
